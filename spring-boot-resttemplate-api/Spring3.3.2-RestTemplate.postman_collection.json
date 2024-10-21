@@ -1,0 +1,203 @@
+{
+	"info": {
+		"_postman_id": "ee85f01f-a272-4287-979b-3a12fd3b5084",
+		"name": "Spring3.3.2-RestTemplate",
+		"description": "Check all APIs in Swagger:\n\n[http://localhost:9090/swagger-ui/index.html](http://localhost:9090/swagger-ui/index.html)\n\n[http://localhost:9090/vision-api-docs](http://localhost:9090/vision-api-docs)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33936986"
+	},
+	"item": [
+		{
+			"name": "Uniconts",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 1,\r\n  \"firstName\": \"Aloke\",\r\n  \"lastName\": \"Das\",\r\n  \"email\": \"alokebd@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://crudcrud.com/api/8a7742e8f57e40a281a50a80b1c97bc6/unicorns",
+					"protocol": "https",
+					"host": [
+						"crudcrud",
+						"com"
+					],
+					"path": [
+						"api",
+						"8a7742e8f57e40a281a50a80b1c97bc6",
+						"unicorns"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UnicornsByEntity",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9091/api/unicornsByEntity",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9091",
+					"path": [
+						"api",
+						"unicornsByEntity"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UnicornsByObject",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9091/api/unicornsByEntity",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9091",
+					"path": [
+						"api",
+						"unicornsByEntity"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "unicornsByEntity",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Aloke Das\",\r\n  \"age\": 52,\r\n  \"colour\": \"blue\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9091/api/unicornsByEntity",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9091",
+					"path": [
+						"api",
+						"unicornsByEntity"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UnicornsByEntity By ID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9091/api/unicornsByEntity/671420baa0a8cd03e818aff8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9091",
+					"path": [
+						"api",
+						"unicornsByEntity",
+						"671420baa0a8cd03e818aff8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CovidReport",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9091/api/report/getAllLatest",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9091",
+					"path": [
+						"api",
+						"report",
+						"getAllLatest"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

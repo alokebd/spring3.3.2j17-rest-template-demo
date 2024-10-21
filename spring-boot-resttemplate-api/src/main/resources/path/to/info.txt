@@ -1,0 +1,57 @@
+# 1). Got to OpenSSL directory
+C:\Users\user>cd C:\Program Files\OpenSSL-Win64
+# 2). Start open ssl
+C:\Program Files\OpenSSL-Win64>start.bat
+
+# 3). Type Following command by going to specific directory eg. C:\Porjects\localRepo.vision.tech\spring3.3.2j17-rest-template-demo\spring-boot-resttemplate-api\src\main\resources\path\to)
+
+# 4). generating server.key
+openssl genrsa -des3 -out server.key 1024
+
+##Enter PEM pass phrase:tech2java
+##Verifying - Enter PEM pass phrase:tech2java
+
+# 5). generating server.cert
+openssl req -new -key server.key -out server.csr
+
+Enter pass phrase for server.key:tech2java
+
+#Filling out following information
+-----
+Country Name (2 letter code) [AU]:CA
+State or Province Name (full name) [Some-State]:ON
+Locality Name (eg, city) []:Toronto
+Organization Name (eg, company) [Internet Widgits Pty Ltd]:Tech2Java
+Organizational Unit Name (eg, section) []:DEV
+Common Name (e.g. server FQDN or YOUR name) []:ALOKEDAS
+Email Address []:alokebd@gmail.com
+
+Please enter the following 'extra' attributes
+to be sent with your certificate request
+A challenge password []:tech2java
+An optional company name []:Tech2java
+
+# 6). generating self-signed certificate signed by key
+openssl x509 -req -days 3650 -in server.csr -signkey server.key -out server.crt
+
+#Filling out following
+Enter pass phrase for server.key: tech2java
+
+Certificate request self-signature ok
+subject=C=CA, ST=ON, L=Toronto, O=Tech2Java, OU=DEV, CN=ALOKEDAS, emailAddress=alokebd@gmail.com
+
+# 7). generating key-store containing self-signed certificate signed by key
+openssl pkcs12 -export -in server.crt -inkey server.key -name "server" -out keystore.p12
+
+# Filling out following 
+Enter pass phrase for server.key:tech2java
+Enter Export Password:tech2java
+Verifying - Enter Export Password:tech2java
+
+# 8). generating trust-store containing self-signed certificate signed by key
+openssl pkcs12 -export -in server.crt -inkey server.key -name "server" -out truststore.jks
+
+# Filling out following
+Enter pass phrase for server.key:tech2java
+Enter Export Password:tech2java
+Verifying - Enter Export Password:tech2java
